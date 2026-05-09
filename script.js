@@ -1,3 +1,13 @@
+// Header Scroll Effect
+const header = document.getElementById('main-header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
 const themeToggle = document.querySelector('.theme-toggle');
 const body = document.body;
 
@@ -54,6 +64,7 @@ async function searchFood() {
             carbs.textContent = (nutrients.carbohydrates_100g || 0).toFixed(1);
 
             searchResult.style.display = 'block';
+            searchResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {
             alert('Food not found. Try another term!');
             searchResult.style.display = 'none';
@@ -62,7 +73,7 @@ async function searchFood() {
         console.error('Error fetching nutrition data:', error);
         alert('Could not connect to the database. Please try again.');
     } finally {
-        searchBtn.textContent = 'Search';
+        searchBtn.textContent = 'Search Now';
         searchBtn.disabled = false;
     }
 }
