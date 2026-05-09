@@ -59,7 +59,8 @@ header {
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 9999; /* Maximize visibility */
+    pointer-events: auto;
 }
 
 .logo {
@@ -68,6 +69,7 @@ header {
     letter-spacing: -0.5px;
     color: var(--primary);
     text-decoration: none;
+    z-index: 10000;
 }
 
 .logo span {
@@ -76,6 +78,10 @@ header {
 }
 
 /* Nav Improvements */
+nav {
+    z-index: 10000;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -93,11 +99,14 @@ nav ul li a {
     font-size: 0.95rem;
     transition: var(--transition);
     opacity: 0.8;
+    padding: 0.5rem; /* Better hit target */
+    display: inline-block;
 }
 
 nav ul li a:hover {
     color: var(--accent);
     opacity: 1;
+    transform: translateY(-1px);
 }
 
 /* Theme Toggle Button */

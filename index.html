@@ -52,6 +52,28 @@
             </div>
         </section>
 
+        <section id="nutrition-search" style="padding: 4rem 8%;">
+            <div class="section-title" style="text-align: center;">
+                <h2>Smart Nutrition Search</h2>
+                <p>Instantly lookup nutritional facts for any food item using our Open Source database.</p>
+            </div>
+            <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                    <input type="text" id="food-input" placeholder="Enter food name (e.g. Avocado)" style="flex: 1; padding: 1rem; border-radius: 12px; border: 1px solid var(--border); background: var(--bg); color: var(--text); outline: none;">
+                    <button id="search-btn" class="btn">Search</button>
+                </div>
+                <div id="search-result" style="display: none; text-align: left; padding: 1.5rem; background: var(--bg); border-radius: 12px; border: 1px solid var(--border);">
+                    <h3 id="food-name" style="margin-bottom: 1rem;"></h3>
+                    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.9rem;">
+                        <div>⚡ Calories: <span id="calories" style="font-weight: bold;"></span> kcal</div>
+                        <div>🥩 Proteins: <span id="proteins" style="font-weight: bold;"></span>g</div>
+                        <div>🥑 Fats: <span id="fats" style="font-weight: bold;"></span>g</div>
+                        <div>🍞 Carbs: <span id="carbs" style="font-weight: bold;"></span>g</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="mission-highlight" style="background: var(--accent-glow); border-radius: 40px; margin: 0 8% 4rem;">
             <div class="section-title" style="text-align: center; padding-top: 4rem;">
                 <h2>Faith-Driven Innovation</h2>
