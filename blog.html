@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthyHuman | Blog</title>
+    <title>HealthyHuman | Longevity Blog</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="logo">Healthy<span>Human</span></div>
+        <a href="index.html" class="logo">Healthy<span>Human</span></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="visions.html">Visions</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle theme">🌙</button></li>
             </ul>
         </nav>
     </header>
@@ -22,37 +24,42 @@
     <main>
         <section class="hero">
             <h1>The Longevity Blog</h1>
-            <p>Insights into health, nutrition, and purposeful living.</p>
+            <p>Expert insights on nutrition, technology, and purposeful living.</p>
         </section>
 
         <section id="blog-list">
             <div class="grid">
                 <article class="card">
-                    <h3>The Power of Whole Foods</h3>
-                    <p>Discover how minimally processed foods provide the essential building blocks for a long and vibrant life. By Mawejje R.</p>
-                    <a href="#" style="color: var(--accent-color); text-decoration: none; font-weight: bold; display: block; margin-top: 1rem;">Read More &rarr;</a>
+                    <div style="font-size: 0.8rem; color: var(--accent); margin-bottom: 0.5rem; font-weight: 800; text-transform: uppercase;">Nutrition</div>
+                    <h3>Metabolic Health in 2026</h3>
+                    <p>Understanding the latest breakthroughs in human nutrition and how to apply them for maximum vitality. By Mawejje R.</p>
+                    <a href="#" style="color: var(--accent); text-decoration: none; font-weight: 700; display: inline-block; margin-top: 1.5rem;">Read Article &rarr;</a>
                 </article>
                 <article class="card">
-                    <h3>Technology as a Tool for Stewardship</h3>
-                    <p>How we use modern software engineering to track and improve our health journey. By Mugagga M.</p>
-                    <a href="#" style="color: var(--accent-color); text-decoration: none; font-weight: bold; display: block; margin-top: 1rem;">Read More &rarr;</a>
+                    <div style="font-size: 0.8rem; color: var(--accent); margin-bottom: 0.5rem; font-weight: 800; text-transform: uppercase;">Technology</div>
+                    <h3>Building Ethical Health Systems</h3>
+                    <p>Why privacy and security are the foundations of the next generation of health technology. By Mugagga M.</p>
+                    <a href="#" style="color: var(--accent); text-decoration: none; font-weight: 700; display: inline-block; margin-top: 1.5rem;">Read Article &rarr;</a>
                 </article>
                 <article class="card">
-                    <h3>Nutrition and Spiritual Vitality</h3>
-                    <p>Exploring the connection between what we eat and our ability to serve God and our community with energy.</p>
-                    <a href="#" style="color: var(--accent-color); text-decoration: none; font-weight: bold; display: block; margin-top: 1rem;">Read More &rarr;</a>
-                </article>
-                <article class="card">
-                    <h3>The Science of Micronutrients</h3>
-                    <p>Deep dive into the vitamins and minerals that act as the foundation for cellular health. By Mawejje R.</p>
-                    <a href="#" style="color: var(--accent-color); text-decoration: none; font-weight: bold; display: block; margin-top: 1rem;">Read More &rarr;</a>
+                    <div style="font-size: 0.8rem; color: var(--accent); margin-bottom: 0.5rem; font-weight: 800; text-transform: uppercase;">Stewardship</div>
+                    <h3>The Sacred Act of Eating</h3>
+                    <p>How mindful, faith-centered nutrition can transform your physical and spiritual well-being.</p>
+                    <a href="#" style="color: var(--accent); text-decoration: none; font-weight: 700; display: inline-block; margin-top: 1.5rem;">Read Article &rarr;</a>
                 </article>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 HealthyHuman. Built for the glory of God by Mugagga M & Mawejje R.</p>
+        <div class="logo">Healthy<span>Human</span></div>
+        <div class="contact-info">
+            <a href="mailto:mugaggamozes@gmail.com" class="contact-link">📧 mugaggamozes@gmail.com</a>
+            <a href="mailto:royalmawejje@gmail.com" class="contact-link">📧 royalmawejje@gmail.com</a>
+        </div>
+        <p style="margin-top: 2rem; opacity: 0.6;">&copy; 2026 HealthyHuman. Soli Deo Gloria.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

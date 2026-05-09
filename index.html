@@ -3,59 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthyHuman | Home</title>
+    <title>HealthyHuman | Divine Nutrition & Longevity</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="logo">Healthy<span>Human</span></div>
+        <a href="index.html" class="logo">Healthy<span>Human</span></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="visions.html">Visions</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle theme">🌙</button></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Empowering Longevity through Divine Nutrition</h1>
-            <p>Founded by Mugagga M (Developer) and Mawejje R (Nutritionist), HealthyHuman is a mission to serve God by providing world-class nutritional knowledge and charitable support to those in need.</p>
-            <a href="visions.html" class="btn">Our Mission</a>
+            <h1>Optimizing the Human Temple for 2026 & Beyond</h1>
+            <p>A mission-driven intersection of advanced nutritional science and secure technological stewardship. Founded by Mugagga M and Mawejje R to serve God through human wellness.</p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center;">
+                <a href="visions.html" class="btn">Our Mission</a>
+                <a href="projects.html" class="btn" style="background: var(--primary);">View Projects</a>
+            </div>
         </section>
 
         <section id="about">
-            <div class="section-title">
-                <h2>The Founders</h2>
-                <p>A synergy of technology and nutritional science.</p>
+            <div class="section-title" style="text-align: center;">
+                <h2>Meet the Founders</h2>
+                <p>Leading the charge in health innovation and technical excellence.</p>
             </div>
             <div class="grid">
                 <div class="card">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">💻</div>
                     <h3>Mugagga M</h3>
-                    <p><strong>Technical Lead & Developer.</strong> Dedicated to building secure, scalable systems that solve real-world problems. Mugagga ensures that the HealthyHuman platform is accessible, robust, and privacy-focused.</p>
+                    <p><strong>Technical Architect.</strong> Specializing in secure, privacy-first systems. Mugagga leverages 2026 technology to build a platform that respects the sanctity of user data while providing high-utility health tools.</p>
                 </div>
                 <div class="card">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🍎</div>
                     <h3>Mawejje R</h3>
-                    <p><strong>Expert Human Nutritionist.</strong> With deep expertise in nutritional biochemistry and human health, Mawejje curates the knowledge base to ensure every piece of advice is scientifically sound and life-enhancing.</p>
+                    <p><strong>Human Nutritionist.</strong> An expert in metabolic health and longevity. Mawejje ensures all nutritional guidance on HealthyHuman is rooted in rigorous science and a deep respect for biological integrity.</p>
                 </div>
             </div>
         </section>
 
-        <section id="charity">
-            <div class="section-title">
-                <h2>Service to God & Charity</h2>
-                <p>We believe health is a gift to be stewarded and shared.</p>
+        <section id="mission-highlight" style="background: var(--accent-glow); border-radius: 40px; margin: 0 8% 4rem;">
+            <div class="section-title" style="text-align: center; padding-top: 4rem;">
+                <h2>Faith-Driven Innovation</h2>
             </div>
-            <div class="card" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <p>HealthyHuman is more than just a tool; it's a vehicle for charity. Our goal is to raise funds to support nutritional education and provide healthy resources to underserved communities worldwide.</p>
+            <div style="max-width: 850px; margin: 0 auto; text-align: center; padding-bottom: 4rem; font-size: 1.2rem; color: var(--text);">
+                <p>We believe that health is not just a personal goal, but a divine responsibility. HealthyHuman serves as a bridge, using technology to fund charitable initiatives that bring nutritional security to those who need it most.</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 HealthyHuman. Built for the glory of God by Mugagga M & Mawejje R.</p>
+        <div class="logo">Healthy<span>Human</span></div>
+        <div class="contact-info">
+            <a href="mailto:mugaggamozes@gmail.com" class="contact-link">📧 mugaggamozes@gmail.com</a>
+            <a href="mailto:royalmawejje@gmail.com" class="contact-link">📧 royalmawejje@gmail.com</a>
+        </div>
+        <p style="margin-top: 2rem; opacity: 0.6;">&copy; 2026 HealthyHuman. Soli Deo Gloria.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
