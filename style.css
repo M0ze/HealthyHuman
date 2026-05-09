@@ -46,209 +46,139 @@ body {
     transition: var(--transition);
 }
 
-/* Glassmorphism Header */
-header {
-    background-color: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 1.2rem 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: var(--shadow);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 9999; /* Maximize visibility */
-    pointer-events: auto;
+/* Base Layout (Mobile First) */
+section {
+    padding: 4rem 5%;
 }
 
-.logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    color: var(--primary);
-    text-decoration: none;
-    z-index: 10000;
-}
-
-.logo span {
-    color: var(--accent);
-    position: relative;
-}
-
-/* Nav Improvements */
-nav {
-    z-index: 10000;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-nav ul li {
-    margin-left: 2.5rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--text);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: var(--transition);
-    opacity: 0.8;
-    padding: 0.5rem; /* Better hit target */
-    display: inline-block;
-}
-
-nav ul li a:hover {
-    color: var(--accent);
-    opacity: 1;
-    transform: translateY(-1px);
-}
-
-/* Theme Toggle Button */
-.theme-toggle {
-    background: var(--border);
-    border: none;
-    padding: 0.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 2rem;
-    color: var(--text);
-    transition: var(--transition);
-}
-
-.theme-toggle:hover {
-    background: var(--accent-glow);
-    color: var(--accent);
-}
-
-/* Hero Section Refinement */
 .hero {
-    padding: 8rem 8% 6rem;
+    padding: 6rem 5% 4rem;
     text-align: center;
     background: radial-gradient(circle at top right, var(--accent-glow), transparent 40%),
                 radial-gradient(circle at bottom left, var(--accent-glow), transparent 40%);
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 2.5rem; /* Smaller for mobile */
     font-weight: 850;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     background: linear-gradient(to right, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    max-width: 700px;
+    font-size: 1.1rem;
+    max-width: 100%;
     margin: 0 auto 2.5rem;
     color: var(--text-muted);
 }
 
-.btn {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background-color: var(--accent);
-    color: white;
-    text-decoration: none;
-    border-radius: 12px;
-    font-weight: 700;
-    box-shadow: 0 10px 20px -10px var(--accent);
-    transition: var(--transition);
+header {
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1rem 5%;
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 30px -10px var(--accent);
-    filter: brightness(1.1);
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* Wrap links if needed */
+    justify-content: center;
 }
 
-/* Grid & Cards (Glassmorphism) */
-section {
-    padding: 6rem 8%;
+nav ul li {
+    margin-left: 0; /* Reset for mobile */
 }
 
-.section-title {
-    margin-bottom: 4rem;
-}
-
-.section-title h2 {
-    font-size: 2.8rem;
-    font-weight: 800;
-    letter-spacing: -1px;
-    margin-bottom: 1rem;
+.theme-toggle {
+    margin-left: 0.5rem;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1.5rem;
 }
 
 .card {
-    background: var(--card-bg);
-    padding: 3rem;
-    border-radius: 24px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
+    padding: 2rem; /* Reduced padding for mobile */
+    border-radius: 20px;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent);
+/* Desktop & Larger Screens */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.2rem 8%;
+    }
+
+    nav ul {
+        gap: 0;
+    }
+
+    nav ul li {
+        margin-left: 2.5rem;
+    }
+
+    section {
+        padding: 6rem 8%;
+    }
+
+    .hero {
+        padding: 8rem 8% 6rem;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+        letter-spacing: -2px;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+        max-width: 700px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .card {
+        padding: 3rem;
+    }
+
+    .theme-toggle {
+        margin-left: 2rem;
+    }
 }
 
-.card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.2rem;
-    color: var(--accent);
+/* Specific component fixes */
+#nutrition-search .card {
+    max-width: 100% !important;
 }
 
-/* Footer & Contact */
-footer {
-    background-color: var(--card-bg);
-    border-top: 1px solid var(--border);
-    padding: 4rem 8%;
-    text-align: center;
+#nutrition-search div[style*="display: flex"] {
+    flex-direction: column;
 }
 
-.contact-info {
-    margin: 2rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
-
-.contact-link {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: var(--transition);
-}
-
-.contact-link:hover {
-    color: var(--accent);
-}
-
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    header { padding: 1rem 5%; }
-    nav ul li { margin-left: 1rem; }
+@media (min-width: 600px) {
+    #nutrition-search div[style*="display: flex"] {
+        flex-direction: row;
+    }
 }
