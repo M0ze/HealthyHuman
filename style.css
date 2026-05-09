@@ -70,16 +70,21 @@ header {
     z-index: 1000;
     padding: 1rem 5%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Mobile: Stack vertically by default */
     align-items: center;
-    transition: var(--transition);
+    gap: 1rem;
+    box-shadow: var(--shadow-sm); /* Lighter shadow for mobile header */
+    transition: padding 0.4s var(--transition), background-color 0.5s ease, backdrop-filter 0.5s ease; /* Added backdrop-filter transition */
+    background-color: var(--nav-bg); /* Ensure base nav background is always visible */
+    backdrop-filter: blur(16px); /* Subtle default blur */
+    -webkit-backdrop-filter: blur(16px);
 }
 
 header.scrolled {
-    padding: 0.75rem 5%;
-    background-color: var(--nav-bg);
-    backdrop-filter: blur(20px);
+    padding: 0.75rem 5%; /* Slightly smaller padding when scrolled */
+    backdrop-filter: blur(24px); /* Slightly more blur when scrolled */
     border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-md); /* Slightly more prominent shadow when scrolled */
 }
 
 .logo {
